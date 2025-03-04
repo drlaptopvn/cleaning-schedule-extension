@@ -9,7 +9,8 @@
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "node-fetch": "^3.3.2"
   },
   "scripts": {
     "dev": "nodemon --ignore ./members.json --env-file=./.env server.js"
