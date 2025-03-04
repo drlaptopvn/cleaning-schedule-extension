@@ -56,30 +56,3 @@ app.get("/getMembers", getMembers);
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-// Tạo file app.js
-const axios = require("axios"); // Cần cài đặt package axios
-
-async function getIP() {
-  try {
-    const response = await fetch("https://api.ipify.org/?format=json");
-    const data = await response.json();
-
-    // Lấy thời gian hiện tại
-    const now = new Date().toLocaleString();
-
-    // Hiển thị kết quả
-    console.log(`[${now}] IP Response:`, data);
-  } catch (error) {
-    console.error("Error fetching IP:", error);
-  }
-}
-
-// Chạy lần đầu tiên ngay lập tức
-getIP();
-
-// Thiết lập interval để chạy mỗi 5 phút (300,000 milliseconds)
-setInterval(getIP, 300000);
-
-// Thông báo khởi động
-console.log("IP Fetcher started. Will check every 5 minutes...");
